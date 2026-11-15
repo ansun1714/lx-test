@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------- 构建产物
+# 只保留当前版本安装包，历史版本与签名中间文件不入库
+*.apk
+!LXMusic-v3.13.7.apk
+*.idsig
+*.jks
+*.keystore
+
+# ---------------------------------------------------------------- 体积 / 第三方版权
+# 历年验收截图（280 张，18 MB）、原版 APK 拆包参考、原版源码参考一律不入库
+evidence/*.png
+evidence/orig-apk/
+evidence/lx-src/
+# 第三方音源脚本不入库（测试用自造音源保留）
+evidence/fixtures/星海音乐源*.js
+
+# ---------------------------------------------------------------- 本地环境
+.workbuddy/
+node_modules/
+*.log
+
+# ---------------------------------------------------------------- 鸿蒙工程
+harmony/node_modules/
+harmony/entry/build/
+harmony/.hvigor/
+harmony/oh-package-lock.json5
+harmony/entry/src/main/resources/rawfile/index.html
+.hvigor-pkgs/
+.hap
+*.hap
